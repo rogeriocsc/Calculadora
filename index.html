@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagems/ico-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+        <h2>Calculadora</h2>
+    </header>
+    <main>
+        <section class="section-form">
+            <section class="elementos">
+                <div class="campo">
+                    <label for="v1">Valor</label>
+                    <input type="text" name="v2" id="val1" placeholder="Informe o Primeiro Valor">
+                </div>
+                <div class="campo">
+                    <label for="v2">Valor</label>
+                    <input type="text" name="v2" id="val2" placeholder="Informe o Segundo Valor">
+                </div>
+                <div class="campo">
+                    <select id="operacao">
+                        <option value="">Selecione a Operação</option>
+                        <option value="1">Soma</option>
+                        <option value="2">Subtração</option>
+                        <option value="3">Multiplicação</option>
+                        <option value="4">Divisão</option>
+                    </select>
+                </div>
+                <button onclick="calcular()">Verificar</button>
+                <div class="res" id="resp">
+                    <p>Informe os dados Acima!</p>
+                </div>
+            </section>
+            <section class="img">
+                <img src="imagems/calculadora.png">
+            </section>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
