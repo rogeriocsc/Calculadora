@@ -7,10 +7,10 @@ function calcular() {
     if (v1.value.length == 0 || v2.value.length == 0) {
         return window.alert('[ERRO] Informe os Valores!')
     }
-    let soma = (valor1 + valor2)
-    let sub = (valor1 - valor2)
-    let multp = (valor1 * valor2)
-    let div = (valor1 / valor2)
+    let soma = valor1 + valor2
+    let sub = valor1 - valor2
+    let multp = valor1 * valor2
+    let div = valor1 / valor2
     let operacao = document.getElementById('operacao')
     let op = Number(operacao.value)
     switch (op) {
