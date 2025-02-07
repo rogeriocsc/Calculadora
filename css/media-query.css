@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* Tablet: 768px até 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: linear-gradient(to top, #60BF81, #347355);
+    }
+
+    .form-calculadora  {
+        width: 90vw;
+        height: 470px;
+    }
+
+    div.imagem {
+        float: left;
+        width: 40%;
+        height: 100%;
+        background-position: center center;
+    }
+
+    div.calculadora {
+        float: right;
+        width: 60%;
+    }
+
+    .campo input[type="text"] {
+        width: 54%;
+    }
+}
+
+/* Celular: de 600px até 768px */
+@media screen and (max-width: 768px) {
+    body {
+        background: #60BF81;
+    }
+
+    .form-calculadora {
+        width: 300px;
+        height: 530px;
+    }
+
+    div.imagem {
+        width: 100%;
+        height: 150px;
+        background-position: center center;
+    }
+
+    div.calculadora {
+        width: 100%;
+    }
+
+    .calculadora > h1 {
+        display: none;
+    }
+
+    div.campo label {
+        margin-top: 8px;
+    }
+
+    .campo input[type="text"] {
+        width: 60%;
+    } 
+}

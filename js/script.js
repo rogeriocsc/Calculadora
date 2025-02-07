@@ -1,7 +1,7 @@
 function calcular() {
     let v1 = document.getElementById('val1')
     let v2 = document.getElementById('val2')
-    let res = document.getElementById('resp')
+    let res = document.getElementById('resposta')
     let valor1 = Number(v1.value)
     let valor2 = Number(v2.value)
     if (v1.value.length == 0 || v2.value.length == 0) {
