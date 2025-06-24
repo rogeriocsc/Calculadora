@@ -29,7 +29,7 @@ main {
     width: 100vw;
 }
 
-.form-calculadora {
+.projeto-calculadora {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -38,12 +38,11 @@ main {
     background: white;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.247);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.349);
     transform: translate(-50%, -50%);
 }
 
 .imagem {
-    display: block;
     float: right;
     width: 50%;
     height: 100%;
@@ -54,20 +53,15 @@ main {
 }
 
 .calculadora {
-    display: block;
     float: left;
     width: 50%;
+    text-align: center;
 }
 
 .calculadora > h1 {
-    text-align: center;
     padding-top: 10px;
     font-size: 1.7em;
     color: red;
-}
-
-div.campo {
-    text-align: center;
 }
 
 div.campo label {
@@ -78,7 +72,7 @@ div.campo label {
 }
 
 .campo input[type="text"] {
-	width: 54%;
+	width: 50%;
     padding: 7px;
     border: 2px solid #127369;
     border-radius: 8px;
@@ -89,19 +83,18 @@ div.campo label {
     outline: none;
 }
 
-.campo select {
+select {
     margin-top: 14px;
     padding: 5px;
     background-color: #e9e8e8;
     color: #414040;
-    text-align: center;
     cursor: pointer;
     outline: none;
 }
 
-.calculadora > button {
+button {
     display: block;
-    margin: 20px auto;
+    margin: 14px auto;
     width: 150px;
     height: 40px;
     background-color: #D92525;
@@ -112,12 +105,12 @@ div.campo label {
     cursor: pointer;
 }
 
-.calculadora > button:hover{
+button:hover{
     background-color: #03A64A;
 }
 
 div.res {
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.26em;
     padding: 5px;
 }
