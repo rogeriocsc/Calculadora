@@ -1,33 +1,44 @@
+let v1 = document.getElementById('val1')
+let v2 = document.getElementById('val2')
+let res = document.getElementById('resposta')
+let oper = document.getElementById('operacao')
+let calculo = undefined
+
+function verificar() {
+    if (v1.value.length == 0 || v2.value.length == 0) {
+        window.alert('[ERRO] Informe os Valores!')
+        window.location.reload()
+    }
+}
+
 function calcular() {
-    let v1 = document.getElementById('val1')
-    let v2 = document.getElementById('val2')
-    let res = document.getElementById('resposta')
+    verificar()
     let valor1 = Number(v1.value)
     let valor2 = Number(v2.value)
-    if (v1.value.length == 0 || v2.value.length == 0) {
-        return window.alert('[ERRO] Informe os Valores!')
-    }
-    let soma = valor1 + valor2
-    let sub = valor1 - valor2
-    let multp = valor1 * valor2
-    let div = valor1 / valor2
-    let operacao = document.getElementById('operacao')
-    let op = Number(operacao.value)
+    let op = Number(oper.value)
     switch (op) {
         case 1:
-            res.innerHTML = `A soma entre ${valor1} e ${valor2} é <strong>${soma}</strong>`
+            calculo = valor1 + valor2
+            res.innerHTML = `A Soma entre os valores ${valor1} e ${valor2} <br>
+            Corresponde a: <strong>${calculo}</strong>`
             break;
         case 2:
-            res.innerHTML = `A Subtração entre ${valor1} e ${valor2} é <strong>${sub}</strong>`
+            calculo = valor1 - valor2
+            res.innerHTML = `A Subtração entre os valores ${valor1} e ${valor2} <br>
+            Corresponde a: <strong>${calculo}</strong>`
             break;
         case 3:
-            res.innerHTML = `A Multiplicação entre ${valor1} e ${valor2} é <strong>${multp}</strong>`
+            calculo = valor1 * valor2
+            res.innerHTML = `A Multiplicação entre os valores ${valor1} e ${valor2} <br>
+            Corresponde a: <strong>${calculo}</strong>`
             break;
         case 4:
-            res.innerHTML = `A Divisão entre ${valor1} e ${valor2} é <strong>${div}</strong>`
+            calculo = valor1 / valor2
+            res.innerHTML = `A Divisão entre os valores ${valor1} e ${valor2} <br>
+            Corresponde a: <strong>${calculo}</strong>`
             break;
         default:
-            res.innerHTML = 'Valor Invalido'
+            res.innerHTML = '[ERRO] Valor Inválido'
             break;
     }
 }
