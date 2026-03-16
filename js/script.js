@@ -19,23 +19,31 @@ function calcular() {
     switch (op) {
         case 1:
             calculo = valor1 + valor2
-            res.innerHTML = `A Soma entre os valores ${valor1} e ${valor2} <br>
-            Corresponde a: <strong>${calculo}</strong>`
+            res.innerHTML = `A Soma entre<br> 
+            os valores <strong>${valor1}</strong>
+            e <strong>${valor2}</strong> 
+            <br> Corresponde a: <strong>${calculo}</strong>`
             break;
         case 2:
             calculo = valor1 - valor2
-            res.innerHTML = `A Subtração entre os valores ${valor1} e ${valor2} <br>
-            Corresponde a: <strong>${calculo}</strong>`
+            res.innerHTML = `A Subtração entre<br> 
+            os valores <strong>${valor1}</strong> 
+            e <strong>${valor2}</strong> 
+            <br> Corresponde a: <strong>${calculo}</strong>`
             break;
         case 3:
             calculo = valor1 * valor2
-            res.innerHTML = `A Multiplicação entre os valores ${valor1} e ${valor2} <br>
-            Corresponde a: <strong>${calculo}</strong>`
+            res.innerHTML = `A Multiplicação entre <br> 
+            os valores <strong>${valor1}</strong> 
+            e <strong>${valor2}</strong> 
+            <br> Corresponde a: <strong>${calculo}</strong>`
             break;
         case 4:
             calculo = valor1 / valor2
-            res.innerHTML = `A Divisão entre os valores ${valor1} e ${valor2} <br>
-            Corresponde a: <strong>${calculo}</strong>`
+            res.innerHTML = `A Divisão entre <br> 
+            os valores <strong>${valor1}</strong> 
+            e <strong>${valor2}</strong> 
+            <br> Corresponde a: <strong>${calculo}</strong>`
             break;
         default:
             res.innerHTML = '[ERRO] Valor Inválido'
