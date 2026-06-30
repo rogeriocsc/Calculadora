@@ -1,53 +1,70 @@
 let v1 = document.getElementById('val1')
 let v2 = document.getElementById('val2')
-let res = document.getElementById('resposta')
 let oper = document.getElementById('operacao')
-let calculo = undefined
+let res = document.getElementById('resposta')
 
 function verificar() {
-    if (v1.value.length == 0 || v2.value.length == 0) {
-        window.alert('[ERRO] Informe os Valores!')
-        window.location.reload()
+    // Verifica se os campos estão vazios
+    if (v1.value.trim() === '' || v2.value.trim() === '') {
+        alert('[ERRO] Informe os dois valores!')
+        v1.focus()
+        return true
     }
+
+    // Verifica se foi selecionada uma operação
+    if (oper.value === '') {
+        alert('[ERRO] Selecione uma operação!')
+        oper.focus()
+        return true
+    }
+    return false
 }
 
 function calcular() {
-    verificar()
+    if (verificar()) {
+        return
+    }
     let valor1 = Number(v1.value)
     let valor2 = Number(v2.value)
     let op = Number(oper.value)
+    let calculo
+    let nomeOperacao
     switch (op) {
         case 1:
             calculo = valor1 + valor2
-            res.innerHTML = `A Soma entre<br> 
-            os valores <strong>${valor1}</strong>
-            e <strong>${valor2}</strong> 
-            <br> Corresponde a: <strong>${calculo}</strong>`
+            nomeOperacao = "Soma"
             break;
         case 2:
             calculo = valor1 - valor2
-            res.innerHTML = `A Subtração entre<br> 
-            os valores <strong>${valor1}</strong> 
-            e <strong>${valor2}</strong> 
-            <br> Corresponde a: <strong>${calculo}</strong>`
+            nomeOperacao = "Subtração"
             break;
         case 3:
             calculo = valor1 * valor2
-            res.innerHTML = `A Multiplicação entre <br> 
-            os valores <strong>${valor1}</strong> 
-            e <strong>${valor2}</strong> 
-            <br> Corresponde a: <strong>${calculo}</strong>`
+            nomeOperacao = "Multiplicação"
             break;
         case 4:
+            if (valor2 === 0) {
+                res.innerHTML = '<p><strong>Erro:</strong> Não é possível dividir por zero.</p>'
+                v2.focus()
+                return
+            }
+
             calculo = valor1 / valor2
-            res.innerHTML = `A Divisão entre <br> 
-            os valores <strong>${valor1}</strong> 
-            e <strong>${valor2}</strong> 
-            <br> Corresponde a: <strong>${calculo}</strong>`
+            nomeOperacao = 'Divisão'
+
+            // Exibe duas casas decimais apenas na divisão
+            calculo = calculo.toFixed(2)
             break;
         default:
-            res.innerHTML = '[ERRO] Valor Inválido'
-            break;
+            res.innerHTML = '[ERRO] Operação inválida.'
+            return
     }
+
+    res.innerHTML = `
+        <p>Operação:<strong> ${nomeOperacao} </strong><hr></p>
+        <p>Primeiro valor:<strong> ${valor1} </strong></p>
+        <p>Segundo valor:<strong> ${valor2}</strong></p>
+        <p>Resultado:<strong> ${calculo} </strong></p>
+    `
 }
 

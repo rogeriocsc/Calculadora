@@ -8,10 +8,18 @@
     padding: 0px;
 }
 
-h1, label, input, div.res {
+h1, p, label {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+hr {
+    width: 30%;
+    margin: 5px auto;
+    border: none;
+    border: 2px solid #F24F13;  
+    border-radius: 4px;
 }
 
 body {
@@ -66,14 +74,15 @@ main {
 
 div.campo label {
     display: block;
-    margin: 8px 0px;
+    margin: 5px 0px;
 	color: #024059;
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 .campo input[type="number"] {
-	width: 50%;
-    padding: 7px;
+	width: 40%;
+    margin-bottom: 5px;
+    padding: 8px;
     border: 2px solid #127369;
     border-radius: 8px;
 } 
@@ -84,7 +93,7 @@ div.campo label {
 }
 
 select {
-    margin-top: 14px;
+    margin: 14px 0px;
     padding: 5px;
     background-color: #e9e8e8;
     color: #414040;
@@ -94,9 +103,9 @@ select {
 
 button {
     display: block;
-    margin: 14px auto;
     width: 150px;
     height: 40px;
+    margin: 5px auto;
     background-color: #D92525;
     color: white;
     font-size: 1.04em;
@@ -110,8 +119,7 @@ button:hover{
 }
 
 div.res {
+    padding-top: 5px;
     text-align: center;
-    font-size: 1.1em;
-    padding: 5px;
-    line-height: 1.4em;
+    font-size: 1em;
 }
