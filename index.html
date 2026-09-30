@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/ico-favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-query.css">
+    <link rel="shortcut icon" href="img/ico-favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/script.js" defer></script>
     <title>Calculadora</title>
 </head>
 <body>
     <main>
         <section class="projeto-calculadora">
-            <div class="imagem"></div>
+            <div class="img"></div>
             <div class="calculadora">
                 <h1>Calculadora</h1>
                 <div class="campo">
-                    <label for="val1">Primeiro Valor</label>
-                    <input type="number" name="valor1" id="val1"
-                    placeholder="Informe o Primeiro Valor">
+                    <label for="i_val1">Primeiro Valor</label>
+                    <input type="number" name="val1" id="i_val1">
                 </div>
                 <div class="campo">
-                    <label for="val2">Segundo Valor</label>
-                    <input type="number" name="valor2" id="val2"
-                    placeholder="Informe o Segundo Valor">
+                    <label for="i_val2">Segundo Valor</label>
+                    <input type="number" name="val2" id="i_val2">
                 </div>
-                <select id="operacao">
-                    <option value="">Selecione a Operação</option>
-                    <option value="1">Soma</option>
-                    <option value="2">Subtração</option>
-                    <option value="3">Multiplicação</option>
-                    <option value="4">Divisão</option>
-                </select>
-                <button onclick="calcular()">Calcular</button>
-                <div class="res" id="resposta">
-                    <p>Informe os dados Acima!</p> 
+                <div class="campo">
+                    <select id="oper">
+                        <option value="">Selecione a Operação</option>
+                        <option value="1">Soma</option>
+                        <option value="2">Subtração</option>
+                        <option value="3">Multiplicação</option>
+                        <option value="4">Divisão</option>
+                    </select>
+                </div>
+                <button type="submit" onclick="calcular()">
+                    Calcular
+                </button>
+                <div class="resposta" id="resp">
+                    <p>Calculando..</p>
                 </div>
             </div>
         </section>
     </main>
-    <script src="js/script.js"></script>
 </body>
 </html>
